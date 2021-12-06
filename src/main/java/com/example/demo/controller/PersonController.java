@@ -32,12 +32,12 @@ public class PersonController {
         return personService.getPersonInformationUsingId(id);
     }
 
-    @PutMapping(path = "/update/{id}")
+    @PutMapping(path = "/{id}")
     public void update(@PathVariable String id, @RequestBody Person person ) {
         personService.updatePersonUsingId(id, person);
     }
 
-    @DeleteMapping(path = "/delete/{id}")
+    @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable("id") String id){
         personService.deletePersonUsingId(id);
     }
